@@ -22,6 +22,10 @@ rm php.zip
 'Done!'
 'Downloading Startup Script'
 $WC.DownloadFile("https://raw.githubusercontent.com/ClearSkyTeam/ClearSky/master/start.cmd",".\start.cmd")
+'Done!'
+'Downloading　VS2012...'
+$WC.DownloadFile("https://download.microsoft.com/download/C/A/F/CAF5E118-4803-4D68-B6B5-A1772903D119/VSU4/vcredist_x86.exe",".\vcredist_x86.exe")
+'Done!'
 }
 Catch{
 'Something went wronly , please restart this script later'
@@ -29,6 +33,12 @@ sleep 5
 exit
 }
 'All have done! Run start.cmd for your new server!'
+'If it said to be'
+''
+'/usr/bin/php/php.exe: error while loading shared libraries: MSVCR110.dll: cannot open shared object file: No such file or directory'
+''
+'please install vcredist_x86.exe.'
+
 sleep 5
 rm Windows-Installer.ps1
 exit
